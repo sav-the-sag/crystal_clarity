@@ -17,6 +17,12 @@ const typeDefs = `
         token: ID!
         user: User
     }
+
+    input AffirmationInput {
+        message: String
+    }
+
+    
 `;
 
 module.exports = typeDefs;
