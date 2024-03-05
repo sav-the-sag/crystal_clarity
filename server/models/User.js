@@ -25,4 +25,9 @@ const userSchema = new Schema({
         required: false,
     },
     savedAffirmations: [affirmationSchema],
-})
+});
+
+
+const User = model('User', userSchema);
+
+module.exports = User
