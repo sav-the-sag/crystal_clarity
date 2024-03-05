@@ -27,7 +27,14 @@ const typeDefs = `
         affirmation: Affirmation
     }
 
-    
+    type Mutation {
+        login(email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
+        removeUser: User
+        saveAffirmation(affirmationData: AffirmationInput!): User
+        removeAffirmation(message: String!): User
+    }
+
 `;
 
 module.exports = typeDefs;
