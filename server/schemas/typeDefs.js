@@ -29,10 +29,11 @@ const typeDefs = `
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!, bio: String): Auth
         removeUser: User
         saveAffirmation(affirmationData: AffirmationInput!): User
         removeAffirmation(message: String!): User
+        updateBio(bio: String!): User
     }
 
 `;
