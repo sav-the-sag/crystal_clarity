@@ -22,6 +22,11 @@ const typeDefs = `
         message: String
     }
 
+    type Query {
+        me: User
+        affirmation: Affirmation
+    }
+
     
 `;
 
