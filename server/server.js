@@ -15,3 +15,9 @@ const server = new ApolloServer({
     typeDefs,
     resolvers,
 });
+
+// new instance of Apollo server with graphql schema
+const startApolloServer = async () => {
+    await server.start();
+    
+}
