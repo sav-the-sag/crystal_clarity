@@ -22,7 +22,7 @@ const startApolloServer = async () => {
 
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
-    
+
     // client-side requests starting with /graphql are handled by the apollo server
     app.use('/graphql', expressMiddleware(server, {
         context: authMiddleware
@@ -32,8 +32,20 @@ const startApolloServer = async () => {
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(path.join(__dirname, '../client/dist')));
 
-        app.get('*', (req,res) => {
+        app.get('*', (req, res) => {
             res.sendFile(path.join(__dirname, '../client/dist/index.html'));
         });
     }
-}
+
+    // starts the server once db is open
+    db.once('open', () => {
+        app.listen(PORT, () => {
+            console.log(`Api server listening on localhost:${PORT}`);
+            console.log(`Use GraphQL at http://localhost:${PORT}/graphql`)
+        })
+    })
+
+};
+
+// call async function to start server
+startApolloServer();
