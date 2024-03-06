@@ -9,7 +9,7 @@ const typeDefs = `
     }
 
     type Affirmation {
-        _id: ID
+        affirmationId: ID
         message: String
     }
 
@@ -19,7 +19,8 @@ const typeDefs = `
     }
 
     input AffirmationInput {
-        message: String
+        affirmationId: String!
+        message: String!
     }
 
     type Query {
@@ -32,7 +33,7 @@ const typeDefs = `
         addUser(username: String!, email: String!, password: String!, bio: String): Auth
         removeUser(email: String!, password: String!): User
         saveAffirmation(affirmationData: AffirmationInput!): User
-        removeAffirmation(message: String!): User
+        removeAffirmation(affirmationId: ID!): User
         updateBio(bio: String!): User
     }
 
