@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import Globe from './Globe';
 import './App.css';
+
+// Add these require statements at the top
+const Globe = require('./Globe');
+const crystalImage = require('./assets/crystal.png');
 
 function App() {
     const [affirmation, setAffirmation] = useState('');
@@ -22,6 +25,7 @@ function App() {
     return (
         <div className="app-container">
             <header>
+                <img src={crystalImage} alt="Crystal Image" />
                 <h1>Affirmation Crystal</h1>
             </header>
             <main>
