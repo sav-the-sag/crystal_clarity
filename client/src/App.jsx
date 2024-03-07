@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Globe from './Globe';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [affirmation, setAffirmation] = useState('');
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // Function to generate affirmation
+    const generateAffirmation = () => {
+        // Logic to generate affirmation
+        const affirmations = [
+            "You are capable of achieving great things.",
+            "You are worthy of love and respect.",
+            "You possess the strength to overcome challenges.",
+            "You radiate positivity and kindness.",
+            "You attract abundance and success into your life."
+        ];
+        const randomIndex = Math.floor(Math.random() * affirmations.length);
+        setAffirmation(affirmations[randomIndex]);
+    };
+
+    return (
+        <div className="app-container">
+            <header>
+                <h1>Affirmation Crystal</h1>
+            </header>
+            <main>
+                <div className="crystal-globe">
+                    <Globe />
+                </div>
+                <div className="affirmation">{affirmation}</div>
+                <button id="generate-button" onClick={generateAffirmation}>Generate Affirmation</button>
+            </main>
+            <footer>
+                <p>&copy; 2024 Affirmation Crystal Globe</p>
+            </footer>
+        </div>
+    );
 }
 
-export default App
+export default App;

@@ -1,42 +1,65 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff80b3, #4d4dff); /* Background gradient color */
+}
+
+/* Center-align header text */
+header {
   text-align: center;
+  margin-top: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #ffffff; /* White color */
+  font-size: 3rem; /* Larger font size */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nicer font */
+  border-bottom: 2px solid #ffffff; /* Bottom border */
+  padding-bottom: 0.5rem; /* Adjust spacing */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Center-align and style main content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Adjust as needed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+
+/* Style the affirmation text */
+.affirmation {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5); /* White with transparency */
+  border-radius: 10px;
 }
 
-.card {
-  padding: 2em;
+/* Style the "Generate Affirmation" button */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0526e1; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+/* Change button background color on hover */
+button:hover {
+  background-color: #009966; /* Darker green */
+}
+
+/* Style footer text */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
 }
