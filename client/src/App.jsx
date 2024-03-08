@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 // Add these require statements at the top
-const Globe = require('./Globe');
+const Globe = require('./pages/Globe');
 const crystalImage = require('./assets/crystal.png');
 
 function App() {
