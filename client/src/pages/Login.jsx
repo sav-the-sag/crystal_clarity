@@ -1,3 +1,5 @@
+import LoginForm from '../components/Login';
+
 export default function Login() {
     return (
       <div>
@@ -5,6 +7,7 @@ export default function Login() {
         <p>
          Login in to generate your daily affirmation! 
         </p>
+        <LoginForm />
       </div>
     );
   }
