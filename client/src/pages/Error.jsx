@@ -1,10 +1,10 @@
 export default function Error() {
     return (
-      <div>
-        <h2>Error Page</h2>
-        <p>
-         Oh No! Yikes! 
-        </p>
+        <div className="error-container">
+        <h2>Oops! Something went wrong.</h2>
+        <p>We apologize for the inconvenience. Please try again later.</p>
+        <p>Error Code: 500</p>
+        <button onClick={() => window.location.reload()}>Refresh Page</button>
       </div>
     );
   }
