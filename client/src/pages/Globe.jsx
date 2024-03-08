@@ -1,6 +1,5 @@
-import React from 'react';
 import './Globe.css'; // Import the CSS file for styling the globe
-import crystalImage from './assets/crystal.png'; // Import the image file from the assets folder
+import crystalImage from '../assets/crystal.png';
 
 function Globe() {
   return (
