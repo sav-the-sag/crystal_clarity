@@ -1,3 +1,5 @@
+import SignupForm from '../components/SignupForm';
+
 export default function Signup() {
     return (
       <div>
@@ -5,6 +7,7 @@ export default function Signup() {
         <p>
          Signup to access your daily affirmation! 
         </p>
+        <SignupForm />
       </div>
     );
   }
