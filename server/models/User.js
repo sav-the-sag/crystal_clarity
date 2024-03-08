@@ -22,7 +22,7 @@ const userSchema = new Schema({
         required: true,
         minLength: 6,
     },
-    bio: {
+    intention: {
         type: String,
         required: false,
     },
