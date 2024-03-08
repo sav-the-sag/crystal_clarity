@@ -1,0 +1,44 @@
+/* Globe.css */
+
+.globe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust the height as needed */
+}
+
+.globe {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #99ccff; /* Adjust the background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.crystal-ball {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff; /* Adjust the color of the crystal ball */
+    border-radius: 50%;
+}
+
+.crystal-ball-shadow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the color and opacity of the shadow */
+    border-radius: 50%;
+}
+.globe-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
