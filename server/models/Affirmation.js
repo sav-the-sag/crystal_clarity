@@ -14,4 +14,4 @@ const affirmationSchema = new Schema({
 
 const Affirmation = model('Affirmation', affirmationSchema)
 
-module.exports = {Affirmation};
+module.exports = Affirmation;
