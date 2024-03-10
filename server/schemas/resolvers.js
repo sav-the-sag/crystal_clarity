@@ -7,7 +7,7 @@ const resolvers = {
         // retrieve the Affirmations by using Affirmation.findOne()
         affirmation: async () => {
             return Affirmation.findOne();
-          },
+        },
         // retrieve the logged in user from the context and find the user details in the database
         me: async (parent, args, context) => {
             if (context.user) {
@@ -40,6 +40,52 @@ const resolvers = {
 
             return { token, user };
         },
+
+        removeUser: async (parent, args, context) => {
+            if (context.user) {
+                return User.findOneAndDelete({ _id: context.user._id });
+            }
+            throw AuthenticationError;
+        },
+
+        saveAffirmation: async (parent, { affirmationData }, context) => {
+            if (context.user) {
+                const newUserInfo = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { savedAffirmations: affirmationData } },
+                    { new: true }
+                );
+
+                return newUserInfo;
+            }
+
+            throw AuthenticationError;
+        },
+        removeAffirmation: async (parent, { affirmationId }, context) => {
+            if (context.user) {
+                const newUserInfo = await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { savedAffirmations: { affirmationId } } },
+                    { new: true }
+                );
+
+                return newUserInfo;
+            }
+
+            throw AuthenticationError;
+        },
+
+        updateInt: async (parent, {intention}, context) => {
+            if (context.user) {
+                const newUserInfo = await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { intention : intention },
+                    { new : true }
+                );
+
+                return newUserInfo;
+            }
+        }
     }
 }
 
