@@ -1,5 +1,6 @@
 import "../Globe.css"; // Import the CSS file for styling the globe
 const crystalImage = "../assets/crystal.png"
+import { useState } from 'react';
 
 function Globe() {
   return (
