@@ -1,37 +1,10 @@
-import { useQuery } from '@apollo/client';
-import { QUERY_PROFILES } from '../utils/queries';
-
-const Home = () => {
-  const { loading, data } = useQuery(QUERY_PROFILES);
-
-  const profiles = data?.profiles || [];
-
+export default function Home() {
   return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          <ProfileForm />
-
-
-          
-        </div>
-
-        <div className="col-12 col-md-10 my-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ProfileList
-              profiles={profiles}
-              title="crystal clarity"
-            />
-          )}
-        </div>
-      </div>
-    </main>
+    <div>
+      <h2>Home!</h2>
+      <p>
+       nice home
+      </p>
+    </div>
   );
-};
-
-export default Home;
+}
