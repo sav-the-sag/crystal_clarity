@@ -4,6 +4,10 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+        // retrieve the Affirmations by using Affirmation.findOne()
+        affirmation: async () => {
+            return Affirmation.findOne();
+          },
         // retrieve the logged in user from the context and find the user details in the database
         me: async (parent, args, context) => {
             if (context.user) {
