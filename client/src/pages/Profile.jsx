@@ -4,12 +4,15 @@ import GET_ME from '../utils/queries'
 import { REMOVE_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import RemoveUser from '../components/RemoveUser'
+import { useState } from 'react';
 
 export default function Profile() {
 
   const { loading, data } = useQuery(GET_ME);
 
   const user = data?.me || {};
+  const [showModal, setShowModal] = useState(false);
 
   if (loading) {
     return <h2>Loading...</h2>;
