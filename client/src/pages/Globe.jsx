@@ -3,6 +3,8 @@ const crystalImage = "../assets/crystal.png"
 import { useState } from 'react';
 
 function Globe() {
+  // set modal display state
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <h2>Affirmation Crystal</h2>
