@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 
+import Auth from '../utils/auth'
+
 function Navigation() {
   const currentPage = useLocation().pathname;
 
