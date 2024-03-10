@@ -1,27 +1,37 @@
-import "./Globe.css"; // Import the CSS file for styling the globe
+import "../Globe.css"; // Import the CSS file for styling the globe
 const crystalImage = "../assets/crystal.png"
+import { useState } from 'react';
+import AffirmationModal from "../components/AffirmationModal";
 
 function Globe() {
+  // set modal display state
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <h2>Affirmation Crystal</h2>
-      <div className="globe-container">
-        <div className="globe">
-          <img src={crystalImage} alt="Crystal" className="crystal-image" />
-        </div>
-      </div>
       <div className="app-container">
-        
+
         <main>
-          
+          <div className="globe-container">
+            <div className="globe">
+              <img src={crystalImage} alt="Crystal" className="crystal-image" />
+            </div>
+          </div>
           <div className="affirmation">{affirmation}</div>
-          <button id="generate-button" onClick={generateAffirmation}>
+          <button id="generate-button" onClick={() => setShowModal(true)}>
             Generate Affirmation
           </button>
+          <Modal
+            size='lg'
+            show={showModal}
+            onHide={() => setShowModal(false)}
+            aria-labelledby='affirmation-modal'>
+            <Modal.Body>
+              <AffirmationModal handleModalClose={() => setShowModal(false)} />
+            </Modal.Body>
+          </Modal>
+
         </main>
-        <footer>
-          <p>&copy; 2024 Affirmation Crystal Clarity</p>
-        </footer>
       </div>
     </div>
   );
