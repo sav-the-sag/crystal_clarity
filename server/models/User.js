@@ -26,7 +26,12 @@ const userSchema = new Schema({
         type: String,
         required: false,
     },
-    savedAffirmations: [Affirmation],
+    savedAffirmations: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Affirmation'
+        }
+    ],
 });
 
 //password hashing using bcrypt
