@@ -4,12 +4,15 @@ import GET_ME from '../utils/queries'
 import { REMOVE_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import RemoveUser from '../components/RemoveUser'
+import { useState } from 'react';
 
 export default function Profile() {
 
   const { loading, data } = useQuery(GET_ME);
 
   const user = data?.me || {};
+  const [showModal, setShowModal] = useState(false);
 
   if (loading) {
     return <h2>Loading...</h2>;
@@ -17,6 +20,9 @@ export default function Profile() {
   return (
     <div>
       <h2>Welcome {user.username}!</h2>
+      <button id="delete-button" onClick={() => setShowModal(true)}>
+        Delete Profile
+          </button>
       <div>
         <Intention intention={user.intention}/>
       </div>
@@ -33,6 +39,15 @@ export default function Profile() {
         />
       )}
       </div>
+      <Modal
+            size='lg'
+            show={showModal}
+            onHide={() => setShowModal(false)}
+            aria-labelledby='delete-modal'>
+            <Modal.Body>
+              <RemoveUser handleModalClose={() => setShowModal(false)} />
+            </Modal.Body>
+          </Modal>
     </div>
   );
 }

@@ -13,23 +13,18 @@ function Navigation() {
           Home
         </Link>
       </li>
+      
       <li>
         <Link
-          to="/Login"
-          className={currentPage === '/Login' ? 'nav-link active' : 'nav-link'}
+          to="/About"
+          className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
         >
-          Login
+          About our application
         </Link>
       </li>
-      <li>
-        <Link
-          to="/Signup"
-          className={currentPage === '/Signup' ? 'nav-link active' : 'nav-link'}
-        >
-          Signup
-        </Link>
-      </li>
-      <li>
+      {Auth.loggedIn() ? (
+        <>
+    <li>
         <Link
           to="/Profile"
           className={currentPage === '/Profile' ? 'nav-link active' : 'nav-link'}
@@ -45,14 +40,28 @@ function Navigation() {
           Crystal Ball
         </Link>
       </li>
-      <li>
-        <Link
-          to="/About"
-          className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
-        >
-          About our application
-        </Link>
-      </li>
+          <li><Link onClick={Auth.logout}>Logout</Link></li>
+        </>
+      ) : (
+        <>
+          <li>
+            <Link
+              to="/Login"
+              className={currentPage === '/Login' ? 'nav-link active' : 'nav-link'}
+            >
+              Login  
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Signup"
+              className={currentPage === '/Signup' ? 'nav-link active' : 'nav-link'}
+            >
+              Signup
+            </Link>
+          </li>
+        </>
+      )}
     </ul>
   );
 }
