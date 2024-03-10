@@ -43,4 +43,4 @@ const AffirmationsList = ({ savedAffirmations, isLoggedInUser = false }) => {
     )
 }
 
-export default AffirmationsList'
+export default AffirmationsList;
