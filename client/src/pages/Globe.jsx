@@ -1,4 +1,4 @@
-import "./Globe.css"; // Import the CSS file for styling the globe
+import "../Globe.css"; // Import the CSS file for styling the globe
 const crystalImage = "../assets/crystal.png"
 
 function Globe() {
