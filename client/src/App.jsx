@@ -1,22 +1,55 @@
 import { Outlet } from 'react-router-dom';
-
 import Header from './components/Header/Header';
-
 import Footer from './components/Footer/Footer'
-
 import './App.css'
+// allows interaction with graphQL api on frontend //
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+// main GraphQL api end point
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+//defines authentication link using 'setContext' middleware.//
+const authLink = setContext((_, { headers }) => {
+  // get token from local storage
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+// Creating new instance of ApolloClient // 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 
 function App() {
 
   return (
-    <div>
-     < Header />
-     <main>
-      < Outlet />
-     </main>
-     < Footer />
-    </div>
-  )
+    <ApolloProvider client={client}>
+
+      <div>
+        < Header />
+        <main>
+          < Outlet />
+        </main>
+        < Footer />
+      </div>
+    </ApolloProvider>
+  );
 }
 
 export default App
