@@ -7,11 +7,6 @@ const About = () => {
         <div className="row">
           <div className="col">
             <div className="card">
-              <div className="card-body">
-                <div className="row abstract-back ">
-                  <img className="avatar" src />
-                </div>
-              </div>
 
               <div className="card-body">
                 <div className="row">

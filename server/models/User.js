@@ -2,7 +2,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const affirmationSchema = require('./Affirmation');
+const Affirmation = require('./Affirmation');
 
 const userSchema = new Schema({
     username: {
@@ -26,7 +26,12 @@ const userSchema = new Schema({
         type: String,
         required: false,
     },
-    savedAffirmations: [affirmationSchema],
+    savedAffirmations: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Affirmation'
+        }
+    ],
 });
 
 //password hashing using bcrypt

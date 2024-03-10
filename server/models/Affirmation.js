@@ -1,5 +1,5 @@
 // dependencies
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const affirmationSchema = new Schema({
     affirmationId: {
@@ -12,4 +12,6 @@ const affirmationSchema = new Schema({
     },
 });
 
-module.exports = affirmationSchema;
+const Affirmation = model('Affirmation', affirmationSchema)
+
+module.exports = Affirmation;
