@@ -17,11 +17,10 @@ const AffirmationModal = () => {
         }
         try {
             const { data } = await saveAffirmation({
-              variables: { affirmationData: { ...bookToSave } },
+              variables: { affirmationData: affirmationId, message },
             });
-            console.log(savedBookIds);
-            setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-          } catch (err) {
+          } 
+          catch (err) {
             console.error(err);
           }
       
