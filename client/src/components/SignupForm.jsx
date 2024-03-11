@@ -9,7 +9,7 @@ const SignupForm = () => {
   const [userFormData, setUserFormData] = useState({ 
     username: '', 
     email: '', 
-    password: '' 
+    password: '', 
   });
 
   const [validated] = useState(false);
