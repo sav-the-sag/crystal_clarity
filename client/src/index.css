@@ -36,6 +36,50 @@ h1 {
   line-height: 1.1;
 }
 
+/* start apply styles to <header> */
+header {
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
+  z-index: 9999;
+
+}
+
+header h1 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 36px;
+  color: #f4ebf3;
+}
+
+
+
+header link {
+  text-decoration: none;
+  color: #0e5913;
+}
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -56,19 +100,6 @@ button:focus-visible {
 } */
 /* button styling */
 
-header .nav-link ul li link {
-  padding: 10px 15px;
-  font-weight: normal;
-  font-size: 1.60vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-
-}
 
 header .nav-link ul li link:hover {
   background: #761370;
