@@ -5,7 +5,12 @@ function Header() {
     return (
         <header className="header">
             <h1>Crystal Clarity</h1>
-            < Navigation />
+            <div>
+            <Navigation
+              currentTab={currentTab}
+              handleTabChange={handleTabChange}
+            ></Navigation>
+          </div>
         </header>
     );
 }
