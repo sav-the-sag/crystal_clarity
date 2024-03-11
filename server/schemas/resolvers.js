@@ -6,7 +6,8 @@ const resolvers = {
     Query: {
         // retrieve the Affirmations by using Affirmation.findOne()
         affirmation: async () => {
-            return Affirmation.findOne();
+            const random = Math.floor(Math.random() * 20)
+            return Affirmation.findOne().skip(random);
         },
         // retrieve the logged in user from the context and find the user details in the database
         me: async (parent, args, context) => {
