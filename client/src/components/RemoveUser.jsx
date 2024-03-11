@@ -4,9 +4,20 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { REMOVE_USER } from '../utils/mutations';
 
+import Auth from '../utils/auth';
+
 const RemoveUser = () => {
     const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-    const [removeUser, { error }] = useMutation(REMOVE_USER)
+    const [removeUser, { data, error }] = useMutation(REMOVE_USER)
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+    
+        setUserFormData({
+          ...userFormData,
+          [name]: value 
+        });
+      };
 
     const handleRemoveUser = async (event) => {
         event.preventDefault();
@@ -20,6 +31,7 @@ const RemoveUser = () => {
             const { data } = await removeUser({
                 variables: { ...userFormData }
             });
+            Auth.logout
         } catch (err) {
             console.error(err);
         }
@@ -42,6 +54,7 @@ const RemoveUser = () => {
                         type='text'
                         placeholder='Your email'
                         name='email'
+                        onChange={handleInputChange}
                         value={userFormData.email}
                         required
                     />
@@ -54,6 +67,7 @@ const RemoveUser = () => {
                         type='password'
                         placeholder='Your password'
                         name='password'
+                        onChange={handleInputChange}
                         value={userFormData.password}
                         required
                     />
