@@ -14,9 +14,7 @@ function Globe() {
 
         <main>
           <div className="globe-container">
-            <div className="globe">
               <img src={crystal} alt="Crystal" className="crystal-image" width="250" />
-            </div>
           </div>
           <br />
           <div>
@@ -25,7 +23,7 @@ function Globe() {
           </button>
           </div>
           <Modal
-            size='lg'
+            size='md'
             show={showModal}
             onHide={() => setShowModal(false)}
             aria-labelledby='affirmation-modal'>
