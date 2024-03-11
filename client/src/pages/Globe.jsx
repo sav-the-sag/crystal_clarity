@@ -1,6 +1,6 @@
 import "../Globe.css"; // Import the CSS file for styling the globe
 const crystalImage = "../assets/crystal.png"
-import { Modal } from 'react-bootstrap';
+import  Modal  from 'react-bootstrap';
 import { useState } from 'react';
 import AffirmationModal from "../components/AffirmationModal";
 
