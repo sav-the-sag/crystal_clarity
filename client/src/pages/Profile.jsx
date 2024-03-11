@@ -2,6 +2,7 @@ import { useQuery, useMutation } from '@apollo/client';
 
 import { GET_ME } from '../utils/queries'
 import { REMOVE_USER } from '../utils/mutations';
+import IntentionsCard from '../components/IntentionsCard'
 
 import Auth from '../utils/auth';
 import RemoveUser from '../components/RemoveUser'
@@ -24,7 +25,7 @@ export default function Profile() {
         Delete Profile
           </button>
       <div>
-        <Intention intention={user.intention}/>
+        <IntentionsCard intention={user.intention}/>
       </div>
       <div>
       {user.savedAffirmations?.length
