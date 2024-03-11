@@ -11,7 +11,7 @@ function Globe() {
   const handleClose = () => setShowModal(false);
   return (
     <div>
-      <h2>Affirmation Crystal</h2>
+      
       <div className="app-container">
 
         <main>
@@ -28,7 +28,8 @@ function Globe() {
             size='md'
             show={showModal}
             onHide={handleClose}
-            aria-labelledby='affirmation-modal'>
+            aria-labelledby='contained-modal-title-vcenter'
+            centered>
             <Modal.Body>
               <AffirmationModal handleModalClose={handleClose} />
             </Modal.Body>
