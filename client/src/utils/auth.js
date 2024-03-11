@@ -28,8 +28,8 @@ class AuthService {
     }
 
     // Set token to local storage and redirect to home page
-    login(token) {
-        localStorage.setItem('id_token', token);
+    login(idToken) {
+        localStorage.setItem('id_token', idToken);
         // Redirect to home page
         window.location.assign('/');
     }
