@@ -36,7 +36,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -53,6 +53,29 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+/* button styling */
+
+header .nav-link ul li link {
+  padding: 10px 15px;
+  font-weight: normal;
+  font-size: 1.60vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+
+header .nav-link ul li link:hover {
+  background: #761370;
+  color: #D5F2EA;
+  border-radius: 15px;
+  text-shadow: none;
+  /*    transition: .5s ease-in;*/
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
