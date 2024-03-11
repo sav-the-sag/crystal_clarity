@@ -2,6 +2,7 @@
 import { useQuery, useMutation } from '@apollo/client';
 import { SAVE_AFFIRMATION } from "../utils/mutations";
 import { GET_AFFIRMATION } from "../utils/queries";
+import Auth from '../utils/auth'
 
 const AffirmationModal = () => {
     const { loading, data } = useQuery(GET_AFFIRMATION);
