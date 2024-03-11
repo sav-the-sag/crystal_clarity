@@ -106,7 +106,6 @@ header .nav-link ul li link:hover {
   color: #D5F2EA;
   border-radius: 15px;
   text-shadow: none;
-  /*    transition: .5s ease-in;*/
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
