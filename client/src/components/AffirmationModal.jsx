@@ -6,6 +6,8 @@ import { GET_AFFIRMATION } from "../utils/queries";
 const AffirmationModal = () => {
     const { loading, data } = useQuery(GET_AFFIRMATION);
 
+    const affData = data?.affirmation || {};
+
     const [saveAffirmation, { error }] = useMutation(SAVE_AFFIRMATION);
 
     const handleSaveAffirmation = async (affirmationId, message) => {
@@ -27,11 +29,11 @@ const AffirmationModal = () => {
     }
 
     return (
-        <div key={affirmationId}>
+        <div key={affData.affirmationId}>
             <h4>
-                {message}
+                {affData.message}
             </h4>
-            <button onClick={() => handleSaveAffirmation(affirmationId, message)}>
+            <button onClick={() => handleSaveAffirmation(data.affirmationId, data.message)}>
                 Save Affirmation
             </button>
         </div>
