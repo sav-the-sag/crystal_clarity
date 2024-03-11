@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import Auth from '../utils/auth'
 
-function Navigation() {
+function Nav() {
   const currentPage = useLocation().pathname;
 
   return (
@@ -68,4 +68,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Nav;

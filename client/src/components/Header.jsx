@@ -1,4 +1,4 @@
-import Navigation from './Navbar';
+import Nav from './Navbar';
 
 
 function Header() {
@@ -6,10 +6,8 @@ function Header() {
         <header className="header">
             <h1>Crystal Clarity</h1>
             <div>
-            <Navigation
-              currentTab={currentTab}
-              handleTabChange={handleTabChange}
-            ></Navigation>
+            <Nav
+            ></Nav>
           </div>
         </header>
     );
