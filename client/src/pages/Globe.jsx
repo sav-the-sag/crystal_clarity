@@ -7,6 +7,8 @@ import AffirmationModal from "../components/AffirmationModal";
 function Globe() {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
   return (
     <div>
       <h2>Affirmation Crystal</h2>
@@ -18,17 +20,17 @@ function Globe() {
           </div>
           <br />
           <div>
-          <button id="generate-button" onClick={() => setShowModal(true)}>
+          <button id="generate-button" onClick={handleShow}>
             Generate Affirmation
           </button>
           </div>
           <Modal
             size='md'
             show={showModal}
-            onHide={() => setShowModal(false)}
+            onHide={handleClose}
             aria-labelledby='affirmation-modal'>
             <Modal.Body>
-              <AffirmationModal handleModalClose={() => setShowModal(false)} />
+              <AffirmationModal handleModalClose={handleClose} />
             </Modal.Body>
           </Modal>
 
