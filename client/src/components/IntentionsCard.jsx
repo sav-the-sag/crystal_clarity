@@ -29,7 +29,7 @@ const IntentionsCard = ({ intention }) => {
             const { data } = await updateInt({
                 variables: { ...intentionData },
             });
-            setIntention('')
+            setIntentionData({intention: ''})
         } catch (err) {
             console.error(err);
         }
