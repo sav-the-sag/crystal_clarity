@@ -49,6 +49,7 @@ const IntentionsCard = ({ intention }) => {
                         placeholder='Your Intention'
                         name='intention'
                         value={intentionData.intention}
+                        onChange={handleInputChange}
                         required
                     />
                 </Form.Group>
