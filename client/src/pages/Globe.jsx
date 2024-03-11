@@ -1,5 +1,6 @@
 import "../Globe.css"; // Import the CSS file for styling the globe
 const crystalImage = "../assets/crystal.png"
+import { Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import AffirmationModal from "../components/AffirmationModal";
 
@@ -17,7 +18,7 @@ function Globe() {
               <img src={crystalImage} alt="Crystal" className="crystal-image" />
             </div>
           </div>
-          <div className="affirmation">{affirmation}</div>
+          
           <button id="generate-button" onClick={() => setShowModal(true)}>
             Generate Affirmation
           </button>
