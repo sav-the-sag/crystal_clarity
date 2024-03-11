@@ -1,5 +1,5 @@
 import "../Globe.css"; // Import the CSS file for styling the globe
-const crystalImage = "../assets/crystal.png"
+import crystal from '../assets/crystal.png'
 import { Modal } from 'react-bootstrap';
 import { useState } from 'react';
 import AffirmationModal from "../components/AffirmationModal";
@@ -15,13 +15,15 @@ function Globe() {
         <main>
           <div className="globe-container">
             <div className="globe">
-              <img src={crystalImage} alt="Crystal" className="crystal-image" />
+              <img src={crystal} alt="Crystal" className="crystal-image" width="250" />
             </div>
           </div>
-          
+          <br />
+          <div>
           <button id="generate-button" onClick={() => setShowModal(true)}>
             Generate Affirmation
           </button>
+          </div>
           <Modal
             size='lg'
             show={showModal}
