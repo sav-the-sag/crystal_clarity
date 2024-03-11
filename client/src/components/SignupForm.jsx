@@ -9,14 +9,14 @@ const SignupForm = () => {
   const [userFormData, setUserFormData] = useState({ 
     username: '', 
     email: '', 
-    password: '' 
+    password: '', 
   });
 
   const [validated] = useState(false);
  
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { data, error }] = useMutation(ADD_USER);
 
   useEffect(() => {
     if (error) {
@@ -37,6 +37,7 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log(userFormData)
 
   
     const form = event.currentTarget;
@@ -49,7 +50,7 @@ const SignupForm = () => {
       const { data } = await addUser({
         variables: { ...userFormData },
       });
-
+      console.log(data)
       Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);

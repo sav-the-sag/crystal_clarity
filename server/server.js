@@ -10,13 +10,15 @@ const db = require('./config/connection');
 // declare port
 const PORT = process.env.PORT || 3001;
 
+// initialize app
+const app = express();
+
 // declare server using ApolloServer constructor
 const server = new ApolloServer({
     typeDefs,
     resolvers,
 });
-// initialize app
-const app = express();
+
 
 // new instance of Apollo server with graphql schema
 const startApolloServer = async () => {

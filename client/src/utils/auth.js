@@ -9,7 +9,7 @@ class AuthService {
     // Check if user is logged in
     loggedIn() {
         const token = this.getToken();
-        return token && !this.isTokenExpired(token);
+        return token && !this.isTokenExpired(token) ? true : false;
     }
 
     // Check if token is expired
@@ -28,8 +28,8 @@ class AuthService {
     }
 
     // Set token to local storage and redirect to home page
-    login(token) {
-        localStorage.setItem('id_token', token);
+    login(idToken) {
+        localStorage.setItem('id_token', idToken);
         // Redirect to home page
         window.location.assign('/');
     }
@@ -38,7 +38,7 @@ class AuthService {
     logout() {
         localStorage.removeItem('id_token');
         // Refresh page
-        window.location.reload();
+        window.location.assign('/');
     }
 }
 
