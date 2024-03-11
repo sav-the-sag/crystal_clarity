@@ -33,7 +33,7 @@ const AffirmationModal = () => {
             <h4>
                 {affData.message}
             </h4>
-            <button onClick={() => handleSaveAffirmation(data.affirmationId, data.message)}>
+            <button onClick={() => handleSaveAffirmation(affData.affirmationId, affData.message)}>
                 Save Affirmation
             </button>
         </div>
