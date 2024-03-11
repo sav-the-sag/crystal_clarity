@@ -30,7 +30,7 @@ const typeDefs = `
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!, intention: String): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         removeUser(email: String!, password: String!): User
         saveAffirmation(affirmationData: AffirmationInput!): User
         removeAffirmation(affirmationId: ID!): User
