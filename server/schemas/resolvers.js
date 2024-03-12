@@ -49,11 +49,11 @@ const resolvers = {
             throw AuthenticationError;
         },
 
-        saveAffirmation: async (parent, { affirmationData }, context) => {
+        saveAffirmation: async (parent, { affirmationId, message }, context) => {
             if (context.user) {
                 const newUserInfo = await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { $push: { savedAffirmations: affirmationData } },
+                    { $push: { savedAffirmations: affirmationId, message } },
                     { new: true }
                 );
 
