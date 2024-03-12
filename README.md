@@ -1,30 +1,23 @@
-# crystal_clarity
+# Crystal Clarity 🔮
 
-CRYSTAL CLARITY
-
-##
+## Description
 
 Description
 Crystal Clarity is a premier destination for cultivating positivity and self-improvement! this app offers a mystical insights of a Magic 8 Ball. Users can create personalized profiles to curate their favorite affirmations, seamlessly retrieve lucky numbers, and enjoy the transformative power of positive thinking. With intuitive features for updating profiles and managing collections, Crystal Clarity empowers individuals to embark on a journey of self-discovery and enlightenment!
 
-##
-
 ## Table of Contents
 
-- [Motivation] (#motivation)
+- [Motivation](#motivation)
 - [User Story](#user-story)
-- [Installation](#installation)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Screenshots](#screenshots)
-- [Deployed Application Link](#Deployed-Application-Link)
+- [Deployed Application Link](#deployed-application-link)
 - [Usage Instructions](#usage-instructions)
-- [Acknowledgments] (#Acknowledgments)
-- [Overview] (#Overview)
-- [Installation-Process] (#Installation-Process)
-- [Built-with] (#Built-with)
-- [What-we-learned] (what-we-learned)
-- [Continous-development] (#Continuous-Development)
-- [Author/authors] (#Author/authors)
+- [Installation Process](#installation-process)
+- [Built with](#built-with)
+- [What we learned](#what-we-learned)
+- [Continous development](#continuous-development)
+- [Authors](#authors)
 
 ## Motivation
 
@@ -54,8 +47,12 @@ THEN I am able to delete intention, user, and update my account and profile
 ```
 
 ## Screenshots
+![IMG_7880](https://github.com/sav-the-sag/crystal_clarity/assets/144732796/27f13529-fbf0-4486-b714-bf766aa82b62)
+![IMG_7882](https://github.com/sav-the-sag/crystal_clarity/assets/144732796/387bd3ae-77c0-48cf-b3c7-d4fcf317ff62)
+![IMG_7883](https://github.com/sav-the-sag/crystal_clarity/assets/144732796/bc721da3-e40a-41e3-8592-18c3c07c47e1)
 
-## Deployed Application Link:
+
+## Deployed Application Link
 
 https://crystal-clarity.onrender.com
 
@@ -69,7 +66,7 @@ Clone the Repository from GitHub or Download Zip Folder from Repository from Git
 Open the cloned (or downloaded) repository in any source code editor(vs code)
 Open the integrated terminal of the document and complete the respective installation guides provided in "Built With" to ensure the cloned documentation will operate.
 
-## Built with:
+## Built with
 
 "concurrently": "^8.2.0"
 "@apollo/server": "^4.7.1",
@@ -92,11 +89,15 @@ An implemenation of Lucky numbers
 Insights for more styling
 A functional theme selector according to user preference
 
-## Author/authors
+## Authors
 
-- elisestankus@github.com
-- sav-the-sag@github.com
-- Siennaxstarr@github.com
-- Kendrink@github.com
+https://github.com/elisestankus
+
+https://github.com/sav-the-sag
+
+https://github.com/Siennaxstarr
+
+https://github.com/kendrink
+
 
 Until next, bye, adios!
