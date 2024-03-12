@@ -22,7 +22,7 @@ header {
 
 header h1 {
   color: #ffffff; 
-  font-size: 5rem; /* Adjusted font size for mobile */
+  font-size: 5rem; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nicer font */
   border-bottom: 2px solid #ffffff; 
   padding-bottom: 0.5rem; 
@@ -41,7 +41,7 @@ header h1 {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Make the list items display as flex */
+  display: flex; 
 }
 
 .navbar li {
@@ -65,7 +65,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Adjusted padding for mobile */
+  padding: 20px; 
   padding-top: 60px;
 }
 
@@ -74,7 +74,7 @@ main {
   text-align: center;
   padding: 0.5rem;
   margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5); /* White with transparency */
+  background-color: rgba(255, 255, 255, 0.5); 
   border-radius: 10px;
 }
 
@@ -87,12 +87,12 @@ button {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 1.5rem; /* Adjusted font size for mobile */
+  font-size: 1.5rem;
 }
 
 /* Change button background color on hover */
 button:hover {
-  background-color: #009966; /* Darker green */
+  background-color: #009966; 
 }
 
 /* Style footer text */
@@ -100,5 +100,5 @@ footer {
   text-align: center;
   margin-top: 2rem;
   color: white;
-  font-size: 1.5rem; /* Adjusted font size for mobile */
+  font-size: 1.5rem; 
 }
