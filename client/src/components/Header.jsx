@@ -1,11 +1,14 @@
-import Navigation from './Navbar';
+import Nav from './Navbar';
 
 
 function Header() {
     return (
         <header className="header">
             <h1>Crystal Clarity</h1>
-            < Navigation />
+            <div>
+            <Nav
+            ></Nav>
+          </div>
         </header>
     );
 }
