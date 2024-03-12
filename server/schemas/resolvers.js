@@ -1,6 +1,6 @@
-const { AuthenticationError } = require('@apollo/server');
+
 const { User, Affirmation } = require('../models');
-const { signToken } = require('../utils/auth');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -11,9 +11,11 @@ const resolvers = {
         },
         // retrieve the logged in user from the context and find the user details in the database
         me: async (parent, args, context) => {
-            if (context.user) {
+            console.log(14, context?.user)
+            if (context?.user) {
                 return User.findOne({ _id: context.user._id });
             }
+            console.log(18)
             throw new AuthenticationError('You need to be logged in!');
         },
     },
@@ -50,15 +52,18 @@ const resolvers = {
         },
 
         saveAffirmation: async (parent, { affirmationId, message }, context) => {
-            if (context.user) {
+            console.log(53, context?.user)
+            if (context?.user) {
                 const newUserInfo = await User.findByIdAndUpdate(
+
                     { _id: context.user._id },
-                    { $push: { savedAffirmations: affirmationId, message } },
+                    { $push: { savedAffirmations: { affirmationId, message } } },
                     { new: true }
                 );
 
                 return newUserInfo;
             }
+            console.log(63, AuthenticationError)
 
             throw AuthenticationError;
         },
@@ -76,12 +81,12 @@ const resolvers = {
             throw AuthenticationError;
         },
 
-        updateInt: async (parent, {intention}, context) => {
+        updateInt: async (parent, { intention }, context) => {
             if (context.user) {
                 const newUserInfo = await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { intention : intention },
-                    { new : true }
+                    { intention: intention },
+                    { new: true }
                 );
 
                 return newUserInfo;

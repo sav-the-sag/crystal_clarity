@@ -18,9 +18,10 @@ const AffirmationModal = () => {
         if (!token) {
             return false;
         }
+        console.log(21, affirmationId, message, token)
         try {
             const { data } = await saveAffirmation({
-              variables: { affirmationData: affirmationId, message },
+              variables: {  affirmationId, message },
             });
           } 
           catch (err) {

@@ -9,7 +9,7 @@ const typeDefs = `
     }
 
     type Affirmation {
-        affirmationId: ID
+        affirmationId: String
         message: String
     }
 
@@ -28,7 +28,7 @@ const typeDefs = `
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         removeUser(email: String!, password: String!): User
-        saveAffirmation(affirmationId: ID!, message: String!): User
+        saveAffirmation(affirmationId: String!, message: String!): User
         removeAffirmation(affirmationId: ID!): User
         updateInt(intention: String!): User
     }
