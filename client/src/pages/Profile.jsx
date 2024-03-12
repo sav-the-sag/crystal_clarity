@@ -4,6 +4,7 @@ import { GET_ME } from '../utils/queries'
 import { REMOVE_USER } from '../utils/mutations';
 import IntentionsCard from '../components/IntentionsCard'
 import { Modal } from 'react-bootstrap';
+import AffirmationsList from '../components/AffirmationsList';
 
 import Auth from '../utils/auth';
 import RemoveUser from '../components/RemoveUser'

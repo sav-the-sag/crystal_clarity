@@ -49,8 +49,8 @@ mutation removeUser($email: String!, $password: String!){
 
 export const SAVE_AFFIRMATION = gql`
 
-mutation saveAffirmation($affirmationData: AffirmationInput!){
-    saveAffirmation(affirmationData: $affirmationData){
+mutation saveAffirmation($affirmationId: String!, $message: String!){
+    saveAffirmation(affirmationId: $affirmationId, message: $message){
         _id
         username
         email
