@@ -9,7 +9,7 @@ const typeDefs = `
     }
 
     type Affirmation {
-        affirmationId: ID
+        affirmationId: String
         message: String
     }
 
@@ -18,10 +18,6 @@ const typeDefs = `
         user: User
     }
 
-    input AffirmationInput {
-        affirmationId: String!
-        message: String!
-    }
 
     type Query {
         me: User
@@ -30,9 +26,9 @@ const typeDefs = `
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(username: String!, email: String!, password: String!, intention: String): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         removeUser(email: String!, password: String!): User
-        saveAffirmation(affirmationData: AffirmationInput!): User
+        saveAffirmation(affirmationId: String!, message: String!): User
         removeAffirmation(affirmationId: ID!): User
         updateInt(intention: String!): User
     }

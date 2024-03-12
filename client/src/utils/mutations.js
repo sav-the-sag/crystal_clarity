@@ -18,8 +18,8 @@ mutation login($email: String!, $password: String!){
 
 export const ADD_USER = gql`
 
-mutation addUser($email: String!, $password: String!, $username: String!){
-    addUser(email: $email, password: $password, username: $username){
+mutation addUser($username: String!, $email: String!, $password: String!){
+    addUser(username: $username, email: $email, password: $password){
         token
         user{
             _id
@@ -49,8 +49,8 @@ mutation removeUser($email: String!, $password: String!){
 
 export const SAVE_AFFIRMATION = gql`
 
-mutation saveAffirmation($affirmationData: AffirmationInput!){
-    saveAffirmation(affirmationData: $affirmationData){
+mutation saveAffirmation($affirmationId: String!, $message: String!){
+    saveAffirmation(affirmationId: $affirmationId, message: $message){
         _id
         username
         email

@@ -1,25 +1,35 @@
 import { useMutation } from '@apollo/client';
 import { UPDATE_INT } from '../utils/mutations';
-import { GET_ME } from '../../utils/queries';
+import { GET_ME } from '../utils/queries';
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 const IntentionsCard = ({ intention }) => {
-    const [intention, setIntention] = useState('');
-    const [updateInt, { error }] = useMutation
+    const [intentionData, setIntentionData] = useState({intention: ''});
+    const [updateInt, { data, error }] = useMutation
         (UPDATE_INT, {
             refetchQueries: [
                 GET_ME,
                 'me'
             ]
         });
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setIntentionData({
+            ...intentionData,
+            [name]: value
+        })
+    }
     const handleUpdateInt = async (event) => {
         event.preventDefault()
+        console.log(intentionData)
+
         try {
             const { data } = await updateInt({
-                variables: { intention },
+                variables: { ...intentionData },
             });
-            setIntention('')
+            setIntentionData({intention: ''})
         } catch (err) {
             console.error(err);
         }
@@ -37,13 +47,14 @@ const IntentionsCard = ({ intention }) => {
                     <Form.Control
                         type='text'
                         placeholder='Your Intention'
-                        name='Intention'
-                        value={intention}
+                        name='intention'
+                        value={intentionData.intention}
+                        onChange={handleInputChange}
                         required
                     />
                 </Form.Group>
                 <Button
-                    disabled={!(intention)}
+                    disabled={!(intentionData.intention)}
                     type='submit'
                 >
                     Set Intention
@@ -52,3 +63,4 @@ const IntentionsCard = ({ intention }) => {
     )
 }
 
+export default IntentionsCard;

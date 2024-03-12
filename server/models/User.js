@@ -1,8 +1,8 @@
 //dependencies
 const { Schema, model } = require('mongoose');
+const Affirmation = require('./Affirmation')
 const bcrypt = require('bcrypt');
 
-const affirmationSchema = require('./Affirmation');
 
 const userSchema = new Schema({
     username: {
@@ -26,7 +26,7 @@ const userSchema = new Schema({
         type: String,
         required: false,
     },
-    savedAffirmations: [affirmationSchema],
+    savedAffirmations: [Affirmation.schema],
 });
 
 //password hashing using bcrypt
