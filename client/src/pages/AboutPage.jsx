@@ -32,7 +32,8 @@ const About = () => {
                   <div className="grid-item">
                     <div className="mission">
                       <p>
-                        our mission is to create awareness of postivity Prepare everyone for a succesful life
+                      Crystal Clarity is a platform for positive affirmations, helping users boost their self-esteem and happiness! 
+
                       </p>
                     </div>
                     
