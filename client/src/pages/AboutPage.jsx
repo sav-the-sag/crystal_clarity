@@ -11,13 +11,11 @@ const About = () => {
               <div className="card-body">
                 <div className="row">
                   <p className="p-about">
-                    About crystal clarity; it is Through healing techniques and
+                    About crystal clarity: It is through healing techniques and
                     positive philosophy, millions will learn to create more of
-                    what they want in their lives–more wellness in their bodies,
-                    minds, and spirits. Affirmations help build and improve your
-                    self-esteem as well as can help you to challenge and
-                    overcome self-sabotaging and negative thoughts. When you
-                    repeat them often, and believe in them.
+                    what they want in their lives (more wellness in their bodies,
+                    minds, and spirits.) Affirmations help build and improve your
+                    self-esteem and helps you to overcome self-sabotaging and negative thoughts. Repeat them often, and believe in them.
                   </p>
                 </div>
               </div>
@@ -32,7 +30,7 @@ const About = () => {
                   <div className="grid-item">
                     <div className="mission">
                       <p>
-                        our mission is to create awareness of postivity Prepare everyone for a succesful life
+                        Our mission is to create awareness of postivity and to prepare everyone for a succesful life
                       </p>
                     </div>
                     
