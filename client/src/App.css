@@ -20,13 +20,17 @@ h1 {
   padding-bottom: 0.5rem; /* Adjust spacing */
 }
 
+h3 {
+  padding: 0.5rem;
+}
+
 
 /* Center-align and style main content */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 80vh; /* Adjust as needed */
 }
 
