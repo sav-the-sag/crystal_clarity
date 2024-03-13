@@ -23,9 +23,7 @@ export default function Profile() {
   return (
     <div>
       <h2>Welcome {user.username}!</h2>
-      <button id="delete-button" onClick={() => setShowModal(true)}>
-        Delete Profile
-          </button>
+      
       <div>
         <IntentionsCard intention={user.intention}/>
       </div>
