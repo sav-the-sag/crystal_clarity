@@ -1,7 +1,7 @@
 function Footer() {
     return(
         <footer className="footer">
-           <h3>Here's the footer content</h3>
+           <h3>Made by Elise Stankus, Savannah Williams, Chukwuka Izamoje and Sienna Vigil© </h3>
         </footer>
     )
 }

@@ -43,7 +43,7 @@ const IntentionsCard = ({ intention }) => {
             </div>
             <Form onSubmit={handleUpdateInt}>
                 <Form.Group>
-                    <Form.Label htmlFor='intention'>Intention</Form.Label>
+                    <Form.Label htmlFor='intention'>Intention </Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='Your Intention'
@@ -56,6 +56,7 @@ const IntentionsCard = ({ intention }) => {
                 <Button
                     disabled={!(intentionData.intention)}
                     type='submit'
+                    className="intention-btn"
                 >
                     Set Intention
                 </Button>

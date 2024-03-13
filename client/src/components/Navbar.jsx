@@ -7,7 +7,7 @@ function Nav() {
 
   return (
     <ul>
-      <li>
+      <li class="test">
         <Link
           to="/"
           className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
@@ -16,7 +16,7 @@ function Nav() {
         </Link>
       </li>
       
-      <li>
+      <li class="test">
         <Link
           to="/About"
           className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
@@ -26,7 +26,7 @@ function Nav() {
       </li>
       {Auth.loggedIn() ? (
         <>
-    <li>
+    <li class="test">
         <Link
           to="/Profile"
           className={currentPage === '/Profile' ? 'nav-link active' : 'nav-link'}
@@ -34,7 +34,7 @@ function Nav() {
           My Profile
         </Link>
       </li>
-      <li>
+      <li class="test">
         <Link
           to="/Globe"
           className={currentPage === '/Globe' ? 'nav-link active' : 'nav-link'}
@@ -42,11 +42,11 @@ function Nav() {
           Crystal Ball
         </Link>
       </li>
-          <li><Link onClick={Auth.logout}>Logout</Link></li>
+          <li class="test"><Link onClick={Auth.logout}>Logout</Link></li>
         </>
       ) : (
         <>
-          <li>
+          <li class="test">
             <Link
               to="/Login"
               className={currentPage === '/Login' ? 'nav-link active' : 'nav-link'}
@@ -54,7 +54,7 @@ function Nav() {
               Login  
             </Link>
           </li>
-          <li>
+          <li class="test">
             <Link
               to="/Signup"
               className={currentPage === '/Signup' ? 'nav-link active' : 'nav-link'}
