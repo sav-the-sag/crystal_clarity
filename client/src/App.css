@@ -23,13 +23,16 @@ h1 {
 h3 {
   padding: 0.5rem;
 }
+h2 {
+  padding: 0.5rem;
+  text-align: center;
+}
 
 /* Center-align and style main content */
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 80vh; /* Adjust as needed */
+  align-items: center; /* Adjust as needed */
 }
 
 
