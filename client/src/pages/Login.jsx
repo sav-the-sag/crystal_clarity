@@ -5,7 +5,7 @@ export default function Login() {
       <div>
         <h2>Login Page</h2>
         <p>
-         Login in to generate your daily affirmation! 
+         Login in to generate an affirmation! 
         </p>
         <LoginForm />
       </div>
