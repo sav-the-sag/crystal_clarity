@@ -1,7 +1,7 @@
 function Footer() {
     return(
         <footer className="footer">
-           <h3>Here's the footer content</h3>
+           <h3>&copy; 2024 Affirmations</h3>
         </footer>
     )
 }
