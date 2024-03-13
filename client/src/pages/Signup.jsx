@@ -5,7 +5,7 @@ export default function Signup() {
       <div>
         <h2>Signup Page</h2>
         <p>
-         Signup to access your daily affirmation! 
+         Signup to access affirmations! 
         </p>
         <SignupForm />
       </div>
