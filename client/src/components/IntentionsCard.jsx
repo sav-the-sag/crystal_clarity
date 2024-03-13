@@ -56,6 +56,7 @@ const IntentionsCard = ({ intention }) => {
                 <Button
                     disabled={!(intentionData.intention)}
                     type='submit'
+                    className="intention-btn"
                 >
                     Set Intention
                 </Button>

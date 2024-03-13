@@ -10,7 +10,7 @@ const About = () => {
 
               <div className="card-body">
                 <div className="row">
-                  <h3 className="p-about">
+                  <h3>
                     About crystal clarity: It is through healing techniques and
                     positive philosophy, millions will learn to create more of
                     what they want in their lives (more wellness in their bodies,
@@ -28,7 +28,7 @@ const About = () => {
 
                 <div className="grid-container-mission">
                   <div className="grid-item">
-                    <div className="mission">
+                    <div>
                       <h3>
                         Our mission is to create awareness of postivity and to prepare everyone for a succesful life
                       </h3>
